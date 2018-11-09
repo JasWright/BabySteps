@@ -1,0 +1,496 @@
+{
+  "Uuid": "2f1307b0-f965-4b55-ad22-5f706e1329c3",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Oct 23 Notes",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "1405d47760dd4ecf8653725e2ab9e0ba",
+      "Inputs": [
+        {
+          "Id": "a50e4aa93eaf4c6da29d4618ce1cbe71",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "785e197bd82046ddbf50bf7249fcf653",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "100..150..5;",
+      "Id": "e24ebad807ec4a54b6cae80d2fea82f9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b36135b3bb13433f977f47dc64ef45d8",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"A\"..\"H\";",
+      "Id": "06cfa2244f6949e0b7737e9277d45e07",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "89ca4642da5b4a409e781a5524089dde",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "+@var[]..[],var[]..[]",
+      "Id": "4dd7035d8bd54f2bb62955d4a4ca899c",
+      "Inputs": [
+        {
+          "Id": "174dc1d00df3463389f7faf24537a7bf",
+          "Name": "x",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "abf7f3c094ce489f983d2f247fb4a83e",
+          "Name": "y",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "84564d30040340f98b38152b7d82275e",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "+ (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "8e4e59a5b65e4f4c8095041c85d0db07",
+      "Inputs": [
+        {
+          "Id": "91ca1c3f77f4483b9b361eba9ffa267c",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ccf8ea81b3dc4b72bbcbd4236b8bdc7f",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "t1 = (100..150..5);\nt2 = (\"A\"..\"H\");\nt3 = t1@L1<1> + t2;",
+      "Id": "ec708584a7964fbeb51116a53ce9e9b6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "04657083293f43b58c5f54996e785028",
+          "Name": "",
+          "Description": "t1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f1f6ae2c45b1465eb2e05705f408b850",
+          "Name": "",
+          "Description": "t2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d956d543e3ec4ed18f8952d888eb049c",
+          "Name": "",
+          "Description": "t3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "//t1 = (100..150..2);\n//t2 = (\"A\"..\"H\");\nt3 = t1@L1<1> + t2;",
+      "Id": "f4cc0707feea4f2e96cfcd907943c62d",
+      "Inputs": [
+        {
+          "Id": "5cbd8c9e09ba4eb4851ef5d255447fdb",
+          "Name": "t1",
+          "Description": "t1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "786474aaf81c450a83131b8ebd6d2e5e",
+          "Name": "t2",
+          "Description": "t2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "05cb1c4ab2bc4a04bd9a88396960b2a4",
+          "Name": "",
+          "Description": "t3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "100..150..3;\n\"A\"..\"H\";",
+      "Id": "e613fca5c6544a42b1ddac98cdd8eb9c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "38dbdc1ec9884d2ba771c410a796fc12",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a7d5337660aa4f9fa6a19a650f7a2eaa",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "b36135b3bb13433f977f47dc64ef45d8",
+      "End": "174dc1d00df3463389f7faf24537a7bf",
+      "Id": "d519b227c3014136a17f4663c0e364be"
+    },
+    {
+      "Start": "89ca4642da5b4a409e781a5524089dde",
+      "End": "abf7f3c094ce489f983d2f247fb4a83e",
+      "Id": "9129bb973587486bb592f680cba44b46"
+    },
+    {
+      "Start": "84564d30040340f98b38152b7d82275e",
+      "End": "a50e4aa93eaf4c6da29d4618ce1cbe71",
+      "Id": "04c1124554b046bf91f6112ee4b4a73a"
+    },
+    {
+      "Start": "d956d543e3ec4ed18f8952d888eb049c",
+      "End": "91ca1c3f77f4483b9b361eba9ffa267c",
+      "Id": "04db1ccea2ee4397a353c33fac17cd85"
+    },
+    {
+      "Start": "38dbdc1ec9884d2ba771c410a796fc12",
+      "End": "5cbd8c9e09ba4eb4851ef5d255447fdb",
+      "Id": "117c322f820240658befe8a46e33c50d"
+    },
+    {
+      "Start": "a7d5337660aa4f9fa6a19a650f7a2eaa",
+      "End": "786474aaf81c450a83131b8ebd6d2e5e",
+      "Id": "ce7d6a21aa7e42beb33900e89a1937c6"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.1.0.5784",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "1405d47760dd4ecf8653725e2ab9e0ba",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 255.07459839136948,
+        "Y": 165.55336718998137
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "e24ebad807ec4a54b6cae80d2fea82f9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -349.72540160863,
+        "Y": 79.953367189981179
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "06cfa2244f6949e0b7737e9277d45e07",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -342.974066297058,
+        "Y": 458.805592709269
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "+",
+        "Id": "4dd7035d8bd54f2bb62955d4a4ca899c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -64.0768784463417,
+        "Y": 208.103662557523
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "8e4e59a5b65e4f4c8095041c85d0db07",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 739.24946833842273,
+        "Y": 220.75620271838622
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "ec708584a7964fbeb51116a53ce9e9b6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 486.07914307507656,
+        "Y": 240.90379397103186
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "f4cc0707feea4f2e96cfcd907943c62d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 177.36195666056273,
+        "Y": 665.22173905110708
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "e613fca5c6544a42b1ddac98cdd8eb9c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -103.87120738953098,
+        "Y": 666.50177220525347
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "4e1be696b80e4eec81c51b09237b7868",
+        "Title": "Quicker way to change names ",
+        "Nodes": [
+          "1405d47760dd4ecf8653725e2ab9e0ba",
+          "ed24f3644adb4b7dbba7c85f1b8b9460",
+          "e24ebad807ec4a54b6cae80d2fea82f9",
+          "06cfa2244f6949e0b7737e9277d45e07",
+          "4dd7035d8bd54f2bb62955d4a4ca899c"
+        ],
+        "Left": -359.72540160863,
+        "Top": -25.586045229362597,
+        "Width": 773.59999999999945,
+        "Height": 576.99163793863158,
+        "FontSize": 36.0,
+        "InitialTop": 27.613954770637406,
+        "InitialHeight": 576.19163793863174,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "d2058f69a6f34d99920077b8c9e4e7f7",
+        "Title": "NODE TO CODE_ Quicker way to change names ",
+        "Nodes": [
+          "8e4e59a5b65e4f4c8095041c85d0db07",
+          "c917854974134faab432eb89f46ab76d",
+          "ec708584a7964fbeb51116a53ce9e9b6"
+        ],
+        "Left": 452.1438518425598,
+        "Top": -23.933741362533368,
+        "Width": 445.90561649586294,
+        "Height": 621.28994408091967,
+        "FontSize": 36.0,
+        "InitialTop": 72.466258637466638,
+        "InitialHeight": 553.79163793863154,
+        "TextblockHeight": 86.4,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "d83f8a1c0a444e87b085f3df062491c4",
+        "Title": "Happy medium between the two",
+        "Nodes": [
+          "f4cc0707feea4f2e96cfcd907943c62d",
+          "e613fca5c6544a42b1ddac98cdd8eb9c"
+        ],
+        "Left": -113.87120738953098,
+        "Top": 612.021739051107,
+        "Width": 528.43316405009364,
+        "Height": 172.99999999999994,
+        "FontSize": 36.0,
+        "InitialTop": 665.22173905110708,
+        "InitialHeight": 138.08026944818022,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "ed24f3644adb4b7dbba7c85f1b8b9460",
+        "Title": "Could be cool if my Dynamo 2.0 worked. Unknown reason why \"node to code\" is not an available option. \r\n\r\nJust as it is a mystery why the Library will no longer display on Revit 2018.2. \r\n\r\nWill upgrade to Revit 2018.3 to see if it resolves any of the visual scripting issues and errors. ",
+        "Nodes": [],
+        "Left": -91.034562515000971,
+        "Top": 27.613954770637406,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "c917854974134faab432eb89f46ab76d",
+        "Title": "Could be cool if my Dynamo 2.0 worked. Unknown reason why \"node to code\" is not an available option. \r\n\r\nJust as it is a mystery why the Library will no longer display on Revit 2018.2. \r\n\r\nWill upgrade to Revit 2018.3 to see if it resolves any of the visual scripting issues and errors. ",
+        "Nodes": [],
+        "Left": 462.1438518425598,
+        "Top": 72.466258637466638,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "a7be59d28a3544f49d093343a502d29c",
+        "Title": "Source: John Pierson \r\nhttps://www.youtube.com/watch?v=hRGIk_P1OPA",
+        "Nodes": [],
+        "Left": -123.43005792540191,
+        "Top": 488.803479438154,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 449.96194631933491,
+    "Y": 110.6632693492237,
+    "Zoom": 0.4661252532111545
+  }
+}
