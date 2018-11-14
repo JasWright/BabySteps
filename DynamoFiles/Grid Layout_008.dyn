@@ -1,0 +1,1280 @@
+{
+  "Uuid": "1295dcd7-7cba-41d2-acd7-a6cf2b3391f9",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Grid Layout_008",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.AddItemToFront@var[]..[],var[]..[]",
+      "Id": "25fc9fcfe041485f887aefa7355e4bd2",
+      "Inputs": [
+        {
+          "Id": "97deae4a862c41a69b19e01c072d278c",
+          "Name": "item",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "85b9570f861043eea7a0715093c05195",
+          "Name": "list",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7f9a4274bfc847269373a0b1e587af05",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "List.AddItemToFront (item: var[]..[], list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "4869df97eaf948bca115dddfc41872bf",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e77c9edecf1f424e94f35b07106822c0",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 250.0,
+      "MinimumValue": 0.0,
+      "StepValue": 10.0,
+      "InputValue": 60.0,
+      "Id": "10452a46f6a8420595c22338485d29dd",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8303daefdeac4af793506ca0f8ca351b",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "21b7e5898e94428698b938d3751c57dc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0afef011f9df4138917b7b77d909a881",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Grid.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point",
+      "Id": "cee03a6fd1c24217843c69fa0246c3ae",
+      "Inputs": [
+        {
+          "Id": "b14a2abf63f84dd3b051db27f202a1db",
+          "Name": "start",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "68ad31a318e542c9bf8dc93cbe0be3b6",
+          "Name": "end",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1976422a0a6b495cb5984535e73beca0",
+          "Name": "Grid",
+          "Description": "Grid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a Revit Grid Element in a project between two end points\n\nGrid.ByStartPointEndPoint (start: Point, end: Point): Grid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "dc2fc063d24144f782240546e3193391",
+      "Inputs": [
+        {
+          "Id": "75f3306ede0241b19e38843c6754c4f0",
+          "Name": "x",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e35906fbcb3f4c78938f3ff01e5cac91",
+          "Name": "y",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1b109314dccb428091906d653918304c",
+          "Name": "z",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ffda44f7f058479cbae2b017ca63ff71",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Form a Point given 3 cartesian coordinates\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "2862805878b64ca5987250c9fba21780",
+      "Inputs": [
+        {
+          "Id": "cdbcb1fc3e124ca2bb2dcb11b7d57eb8",
+          "Name": "x",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7c4dfcc985c84d5b9dfc6985524bb20e",
+          "Name": "y",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "22cdd1bf791a4999bed625c7a059982b",
+          "Name": "z",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ba00dc9cbbb24dc8b0e60352c9dcc64a",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Form a Point given 3 cartesian coordinates\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 250.0,
+      "MinimumValue": -70.0,
+      "StepValue": 10.0,
+      "InputValue": -70.0,
+      "Id": "db0538f7f10e4d3394abbbde67015082",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "10daeced0fca4531885be0d580db8b7c",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Sequence, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "cdb21574c3c54ecfa115a9feb8957fb0",
+      "Inputs": [
+        {
+          "Id": "686db3d7e25a4ed5b47fcc2566f32cea",
+          "Name": "start",
+          "Description": "Number or letter to start the sequence at\r\nDefault value: 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6a9a67211c454eecb9f548cff3b724cb",
+          "Name": "amount",
+          "Description": "Amount of numbers in the sequence\r\nDefault value: 10",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "87d13a726dc94791baf600eebd6ad837",
+          "Name": "step",
+          "Description": "Space between numbers or letters\r\nDefault value: 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d22dda3826b84049ab5c1ebced05a086",
+          "Name": "seq",
+          "Description": "New sequence",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a sequence of numbers."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 26.0,
+      "MinimumValue": 0.0,
+      "StepValue": 2.0,
+      "InputValue": 8.0,
+      "Id": "1c952d6c8cb04f2db1d1dd648ad41956",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "071410e4232a41caaf4ea857650f8946",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "UnitsUI.LengthFromString, UnitsUI",
+      "Value": 5.0292000000201167,
+      "NodeType": "ExtensionNode",
+      "Id": "06edc1f921044503bb4e009c56bd05b3",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "82022be59da64586864c6762d6323ca1",
+          "Name": "number (Feet)",
+          "Description": "number (Feet)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Enter a length."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "startingNum = (((verticleGridNumber * gridSpacing)/2)*-1);",
+      "Id": "f9dbbea1819549518572a096154460c5",
+      "Inputs": [
+        {
+          "Id": "d2136b419dca477d97573c0d509d885f",
+          "Name": "verticleGridNumber",
+          "Description": "verticleGridNumber",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8417be203dbf456aae56c0cb4715a927",
+          "Name": "gridSpacing",
+          "Description": "gridSpacing",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b8ad12e45d8a4cf8ae08a24ec290526d",
+          "Name": "",
+          "Description": "startingNum",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 26.0,
+      "MinimumValue": 0.0,
+      "StepValue": 2.0,
+      "InputValue": 8.0,
+      "Id": "20cba962bfdb4c0189ac94c98ad72ab1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "169774e1e3d44886b52160f4e8dc9cfd",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "UnitsUI.LengthFromString, UnitsUI",
+      "Value": 5.0292000000201167,
+      "NodeType": "ExtensionNode",
+      "Id": "12ac9532f6b44c73bce4ffdaca2c6d1b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1221e3bdbdcf4bcb9e89d2769c81a40d",
+          "Name": "number (Feet)",
+          "Description": "number (Feet)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Enter a length."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "startingNum = (((horizontalGridNumber * gridSpacing)/2)*-1);",
+      "Id": "7714102452ae4acf983bf0c8375caf43",
+      "Inputs": [
+        {
+          "Id": "370dcc6a8e0a404da97e75b46890d9d4",
+          "Name": "horizontalGridNumber",
+          "Description": "horizontalGridNumber",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "184673e196414a5397da1acccef418ac",
+          "Name": "gridSpacing",
+          "Description": "gridSpacing",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a427834f271747699a4036689cba5858",
+          "Name": "",
+          "Description": "startingNum",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Sequence, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "93276349ed6043bd81e1bf4bbbd73c5f",
+      "Inputs": [
+        {
+          "Id": "8b5de7e838fc4c19a783c44235c3492e",
+          "Name": "start",
+          "Description": "Number or letter to start the sequence at\r\nDefault value: 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "250d9b0842744237a6e3a9e8d5f304fe",
+          "Name": "amount",
+          "Description": "Amount of numbers in the sequence\r\nDefault value: 10",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "135d2d8ac63f49569b1c4f0d4361a981",
+          "Name": "step",
+          "Description": "Space between numbers or letters\r\nDefault value: 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "71e3bac77ffa4585a2f36672331126ae",
+          "Name": "seq",
+          "Description": "New sequence",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a sequence of numbers."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "281e41fc109a4e8698add8c9958c9937",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0a641c9c436349fe8b1e5fc6b248ad5c",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "59e6a06275644c8c9830ec64d401fe7c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1172c5f4d8bb461d8899c366460224bf",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.AddItemToFront@var[]..[],var[]..[]",
+      "Id": "c01b4651e35c417ca87272f87a71a43f",
+      "Inputs": [
+        {
+          "Id": "4878d7ca053446ec90b9d3f9424b860e",
+          "Name": "item",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0a7775f630d94b2689265d61111f3105",
+          "Name": "list",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b50810239c624633a429795262278960",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "List.AddItemToFront (item: var[]..[], list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 250.0,
+      "MinimumValue": 0.0,
+      "StepValue": 10.0,
+      "InputValue": 60.0,
+      "Id": "fb918f94f8b445098c45a987c8c54714",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "af13337db8d449b09f9815fecee28fc2",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 250.0,
+      "MinimumValue": -70.0,
+      "StepValue": 10.0,
+      "InputValue": -70.0,
+      "Id": "0abfe01280284685936a5a536cfa1c7a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b3ac40afe98545aa8a0dec3124817406",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "7c6b633de4654c5eb277a2d0bdb2e35f",
+      "Inputs": [
+        {
+          "Id": "c1910eecba3344bfaa9957d6943b0b30",
+          "Name": "x",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "019ab98b60174f318896d078e98d1299",
+          "Name": "y",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "09d5453ed9644c99a36395931255ffd9",
+          "Name": "z",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d717751ea8ca424293a194ac3b7eb618",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Form a Point given 3 cartesian coordinates\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "eb88965a00984c52860ea9f8bc13e0a1",
+      "Inputs": [
+        {
+          "Id": "1be5b37f688745fc9aa2553931bba757",
+          "Name": "x",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "43cc6ba0458e42ba80e2949e27b954ef",
+          "Name": "y",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8d51ae44399a4b7db889c6b1e06f79b0",
+          "Name": "z",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a1f727c9e2ff43989822f9546560eba7",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Form a Point given 3 cartesian coordinates\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Grid.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point",
+      "Id": "0304b6a0c8e748f7865c258d8a1ce473",
+      "Inputs": [
+        {
+          "Id": "38a50c3485694926abc44b3f863e0a69",
+          "Name": "start",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "05a68b453f8241628d79fd8389fcc13e",
+          "Name": "end",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b0f2254e285f4e9a93b5bf0df8b26e56",
+          "Name": "Grid",
+          "Description": "Grid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a Revit Grid Element in a project between two end points\n\nGrid.ByStartPointEndPoint (start: Point, end: Point): Grid"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "7f9a4274bfc847269373a0b1e587af05",
+      "End": "7c4dfcc985c84d5b9dfc6985524bb20e",
+      "Id": "78e55ad0b2d849d193b9b770ddaa38c8"
+    },
+    {
+      "Start": "7f9a4274bfc847269373a0b1e587af05",
+      "End": "e35906fbcb3f4c78938f3ff01e5cac91",
+      "Id": "b26abffab6ad4700825a94d288d53611"
+    },
+    {
+      "Start": "e77c9edecf1f424e94f35b07106822c0",
+      "End": "97deae4a862c41a69b19e01c072d278c",
+      "Id": "28a8825eb738419eba5d2b1000759963"
+    },
+    {
+      "Start": "8303daefdeac4af793506ca0f8ca351b",
+      "End": "cdbcb1fc3e124ca2bb2dcb11b7d57eb8",
+      "Id": "202e772320644112bb11a4974746511a"
+    },
+    {
+      "Start": "0afef011f9df4138917b7b77d909a881",
+      "End": "22cdd1bf791a4999bed625c7a059982b",
+      "Id": "013f50c821294ce1be4df3d2e0636d7b"
+    },
+    {
+      "Start": "0afef011f9df4138917b7b77d909a881",
+      "End": "1b109314dccb428091906d653918304c",
+      "Id": "2eff12e7de454586a12f6fa0db118283"
+    },
+    {
+      "Start": "ffda44f7f058479cbae2b017ca63ff71",
+      "End": "b14a2abf63f84dd3b051db27f202a1db",
+      "Id": "42cb698eb0e146e2a2b167244dcadc3e"
+    },
+    {
+      "Start": "ba00dc9cbbb24dc8b0e60352c9dcc64a",
+      "End": "68ad31a318e542c9bf8dc93cbe0be3b6",
+      "Id": "3d07564737eb4825b25266610acc548b"
+    },
+    {
+      "Start": "10daeced0fca4531885be0d580db8b7c",
+      "End": "75f3306ede0241b19e38843c6754c4f0",
+      "Id": "a72c76281e474b89a3337f89b9120771"
+    },
+    {
+      "Start": "d22dda3826b84049ab5c1ebced05a086",
+      "End": "85b9570f861043eea7a0715093c05195",
+      "Id": "92aec15a454f4f0797118634b0468024"
+    },
+    {
+      "Start": "071410e4232a41caaf4ea857650f8946",
+      "End": "6a9a67211c454eecb9f548cff3b724cb",
+      "Id": "f5ba7abbeae34712ba60cc114593cc47"
+    },
+    {
+      "Start": "071410e4232a41caaf4ea857650f8946",
+      "End": "d2136b419dca477d97573c0d509d885f",
+      "Id": "42dc5a6c3bd5456791ba84edd434289b"
+    },
+    {
+      "Start": "82022be59da64586864c6762d6323ca1",
+      "End": "87d13a726dc94791baf600eebd6ad837",
+      "Id": "8bdd6b124684404b912b8263ccfce3db"
+    },
+    {
+      "Start": "82022be59da64586864c6762d6323ca1",
+      "End": "8417be203dbf456aae56c0cb4715a927",
+      "Id": "723b0d838dc94bda8af61cc0230acc45"
+    },
+    {
+      "Start": "b8ad12e45d8a4cf8ae08a24ec290526d",
+      "End": "686db3d7e25a4ed5b47fcc2566f32cea",
+      "Id": "2f3d7ad1e4484956a641bf9061f90f16"
+    },
+    {
+      "Start": "169774e1e3d44886b52160f4e8dc9cfd",
+      "End": "250d9b0842744237a6e3a9e8d5f304fe",
+      "Id": "af87a7aaaa6b48a6b33461bb7a9ebb38"
+    },
+    {
+      "Start": "169774e1e3d44886b52160f4e8dc9cfd",
+      "End": "370dcc6a8e0a404da97e75b46890d9d4",
+      "Id": "0fddc2e803604de1989700b1906ec5a8"
+    },
+    {
+      "Start": "1221e3bdbdcf4bcb9e89d2769c81a40d",
+      "End": "135d2d8ac63f49569b1c4f0d4361a981",
+      "Id": "b6034173479a40bb9e048f1353819fe4"
+    },
+    {
+      "Start": "1221e3bdbdcf4bcb9e89d2769c81a40d",
+      "End": "184673e196414a5397da1acccef418ac",
+      "Id": "89a435f3c48d4d15b67dc96aca7e0b21"
+    },
+    {
+      "Start": "a427834f271747699a4036689cba5858",
+      "End": "8b5de7e838fc4c19a783c44235c3492e",
+      "Id": "997fc9bc7f504d1ea6a07b48ae14c172"
+    },
+    {
+      "Start": "71e3bac77ffa4585a2f36672331126ae",
+      "End": "0a7775f630d94b2689265d61111f3105",
+      "Id": "9cff004538564b9da54a10843af1df9f"
+    },
+    {
+      "Start": "0a641c9c436349fe8b1e5fc6b248ad5c",
+      "End": "4878d7ca053446ec90b9d3f9424b860e",
+      "Id": "1d6ead9ce171446ea3d9e42b05cfb528"
+    },
+    {
+      "Start": "1172c5f4d8bb461d8899c366460224bf",
+      "End": "8d51ae44399a4b7db889c6b1e06f79b0",
+      "Id": "b6cab668964b4534bc5212cfe83a2f78"
+    },
+    {
+      "Start": "1172c5f4d8bb461d8899c366460224bf",
+      "End": "09d5453ed9644c99a36395931255ffd9",
+      "Id": "cea2540af9e349ddbf7333bd9d6f6df5"
+    },
+    {
+      "Start": "b50810239c624633a429795262278960",
+      "End": "c1910eecba3344bfaa9957d6943b0b30",
+      "Id": "2a22e0cc69b44b30bc616ca05e87f36c"
+    },
+    {
+      "Start": "b50810239c624633a429795262278960",
+      "End": "1be5b37f688745fc9aa2553931bba757",
+      "Id": "af293c604f884b12abf9e39a02022a14"
+    },
+    {
+      "Start": "af13337db8d449b09f9815fecee28fc2",
+      "End": "43cc6ba0458e42ba80e2949e27b954ef",
+      "Id": "68c239bbae86426fa249fcebb05ce293"
+    },
+    {
+      "Start": "b3ac40afe98545aa8a0dec3124817406",
+      "End": "019ab98b60174f318896d078e98d1299",
+      "Id": "ef7a95ae7861438089352bf932dedb0a"
+    },
+    {
+      "Start": "d717751ea8ca424293a194ac3b7eb618",
+      "End": "38a50c3485694926abc44b3f863e0a69",
+      "Id": "e50b2b20382449039c5c9b14d0e3e84e"
+    },
+    {
+      "Start": "a1f727c9e2ff43989822f9546560eba7",
+      "End": "05a68b453f8241628d79fd8389fcc13e",
+      "Id": "348227c770554cc1a80134dce3551010"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [
+    {
+      "NodeId": "cee03a6f-d1c2-4217-843c-69fa0246c3ae",
+      "Binding": {
+        "ByStartPointEndPoint_InClassDecl-1_InFunctionScope-1_Instance0_cee03a6f-d1c2-4217-843c-69fa0246c3ae": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMS4wLjU3ODQlMkMlMjBDdWx0dXJlJTNEbmV1dHJhbCUyQyUyMFB1YmxpY0tleVRva2VuJTNEbnVsbCI+DQo8TnVtYmVyT2ZFbGVtZW50cz4xPC9OdW1iZXJPZkVsZW1lbnRzPg0KPEJhc2UtMF9IYXNEYXRhPmZhbHNlPC9CYXNlLTBfSGFzRGF0YT4NCjxCYXNlLTBfSGFzTmVzdGVkRGF0YT50cnVlPC9CYXNlLTBfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTBfTmVzdGVkRGF0YUNvdW50Pjk8L0Jhc2UtMF9OZXN0ZWREYXRhQ291bnQ+DQo8QmFzZS0wLTBfSGFzRGF0YT50cnVlPC9CYXNlLTAtMF9IYXNEYXRhPg0KPEJhc2UtMC0wX0RhdGEgaWQ9InJlZi0zIj5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0Mk1ESXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrWm1ZNU1tTmtNV1V0TURnMll5MDBabVF6TFRrd00ySXRNRE00TUdFMk5UTTROamN4TFRBd01EVXpNbUZtUEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0ek5EQTJOVFU4TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtMF9EYXRhPg0KPEJhc2UtMC0wX0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0wX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTFfSGFzRGF0YT50cnVlPC9CYXNlLTAtMV9IYXNEYXRhPg0KPEJhc2UtMC0xX0RhdGEgaWQ9InJlZi00Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0Mk1ESXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrWm1ZNU1tTmtNV1V0TURnMll5MDBabVF6TFRrd00ySXRNRE00TUdFMk5UTTROamN4TFRBd01EVXpNbUl3UEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0ek5EQTJOVFk4TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtMV9EYXRhPg0KPEJhc2UtMC0xX0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0xX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTJfSGFzRGF0YT50cnVlPC9CYXNlLTAtMl9IYXNEYXRhPg0KPEJhc2UtMC0yX0RhdGEgaWQ9InJlZi01Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0Mk1ESXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrWm1ZNU1tTmtNV1V0TURnMll5MDBabVF6TFRrd00ySXRNRE00TUdFMk5UTTROamN4TFRBd01EVXpNbUl4UEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0ek5EQTJOVGM4TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtMl9EYXRhPg0KPEJhc2UtMC0yX0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0yX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTNfSGFzRGF0YT50cnVlPC9CYXNlLTAtM19IYXNEYXRhPg0KPEJhc2UtMC0zX0RhdGEgaWQ9InJlZi02Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0Mk1ESXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrWm1ZNU1tTmtNV1V0TURnMll5MDBabVF6TFRrd00ySXRNRE00TUdFMk5UTTROamN4TFRBd01EVXpNbUl5UEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0ek5EQTJOVGc4TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtM19EYXRhPg0KPEJhc2UtMC0zX0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0zX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTRfSGFzRGF0YT50cnVlPC9CYXNlLTAtNF9IYXNEYXRhPg0KPEJhc2UtMC00X0RhdGEgaWQ9InJlZi03Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0Mk1ESXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrWm1ZNU1tTmtNV1V0TURnMll5MDBabVF6TFRrd00ySXRNRE00TUdFMk5UTTROamN4TFRBd01EVXpNbUl6UEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0ek5EQTJOVGs4TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtNF9EYXRhPg0KPEJhc2UtMC00X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC00X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTVfSGFzRGF0YT50cnVlPC9CYXNlLTAtNV9IYXNEYXRhPg0KPEJhc2UtMC01X0RhdGEgaWQ9InJlZi04Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0Mk1ESXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrWm1ZNU1tTmtNV1V0TURnMll5MDBabVF6TFRrd00ySXRNRE00TUdFMk5UTTROamN4TFRBd01EVXpNbUkwUEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0ek5EQTJOakE4TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtNV9EYXRhPg0KPEJhc2UtMC01X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC01X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTZfSGFzRGF0YT50cnVlPC9CYXNlLTAtNl9IYXNEYXRhPg0KPEJhc2UtMC02X0RhdGEgaWQ9InJlZi05Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0Mk1ESXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrWm1ZNU1tTmtNV1V0TURnMll5MDBabVF6TFRrd00ySXRNRE00TUdFMk5UTTROamN4TFRBd01EVXpNbUkxUEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0ek5EQTJOakU4TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtNl9EYXRhPg0KPEJhc2UtMC02X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC02X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTdfSGFzRGF0YT50cnVlPC9CYXNlLTAtN19IYXNEYXRhPg0KPEJhc2UtMC03X0RhdGEgaWQ9InJlZi0xMCI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFdU1DNDJNREl6SlRKREpUSXdRM1ZzZEhWeVpTVXpSRzVsZFhSeVlXd2xNa01sTWpCUWRXSnNhV05MWlhsVWIydGxiaVV6Ukc1MWJHd2lQZzBLUEhOMGNtbHVaMGxFSUdsa1BTSnlaV1l0TXlJK1ptWTVNbU5rTVdVdE1EZzJZeTAwWm1RekxUa3dNMkl0TURNNE1HRTJOVE00TmpjeExUQXdNRFV6TW1JMlBDOXpkSEpwYm1kSlJENE5DanhwYm5SSlJENHpOREEyTmpJOEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTdfRGF0YT4NCjxCYXNlLTAtN19IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtN19IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC04X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLThfSGFzRGF0YT4NCjxCYXNlLTAtOF9EYXRhIGlkPSJyZWYtMTEiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBVMlZ5ZG1salpYTXVVR1Z5YzJsemRHVnVZMlV2VW1WMmFYUlRaWEoyYVdObGN5VXlReVV5TUZabGNuTnBiMjRsTTBReUxqRXVNQzQyTURJekpUSkRKVEl3UTNWc2RIVnlaU1V6Ukc1bGRYUnlZV3dsTWtNbE1qQlFkV0pzYVdOTFpYbFViMnRsYmlVelJHNTFiR3dpUGcwS1BITjBjbWx1WjBsRUlHbGtQU0p5WldZdE15SStabVk1TW1Oa01XVXRNRGcyWXkwMFptUXpMVGt3TTJJdE1ETTRNR0UyTlRNNE5qY3hMVEF3TURVek1tSTNQQzl6ZEhKcGJtZEpSRDROQ2p4cGJuUkpSRDR6TkRBMk5qTThMMmx1ZEVsRVBnMEtQQzloTVRwVFpYSnBZV3hwZW1GaWJHVkpaRDROQ2p3dlUwOUJVQzFGVGxZNlFtOWtlVDROQ2p3dlUwOUJVQzFGVGxZNlJXNTJaV3h2Y0dVK0RRbz08L0Jhc2UtMC04X0RhdGE+DQo8QmFzZS0wLThfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLThfSGFzTmVzdGVkRGF0YT4NCjwvYTE6Q2FsbFNpdGVfeDAwMkJfVHJhY2VTZXJpYWxpc2VySGVscGVyPg0KPC9TT0FQLUVOVjpCb2R5Pg0KPC9TT0FQLUVOVjpFbnZlbG9wZT4NCg=="
+      }
+    },
+    {
+      "NodeId": "0304b6a0-c8e7-48f7-865c-258d8a1ce473",
+      "Binding": {
+        "ByStartPointEndPoint_InClassDecl-1_InFunctionScope-1_Instance0_0304b6a0-c8e7-48f7-865c-258d8a1ce473": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMS4wLjU3ODQlMkMlMjBDdWx0dXJlJTNEbmV1dHJhbCUyQyUyMFB1YmxpY0tleVRva2VuJTNEbnVsbCI+DQo8TnVtYmVyT2ZFbGVtZW50cz4xPC9OdW1iZXJPZkVsZW1lbnRzPg0KPEJhc2UtMF9IYXNEYXRhPmZhbHNlPC9CYXNlLTBfSGFzRGF0YT4NCjxCYXNlLTBfSGFzTmVzdGVkRGF0YT50cnVlPC9CYXNlLTBfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTBfTmVzdGVkRGF0YUNvdW50Pjk8L0Jhc2UtMF9OZXN0ZWREYXRhQ291bnQ+DQo8QmFzZS0wLTBfSGFzRGF0YT50cnVlPC9CYXNlLTAtMF9IYXNEYXRhPg0KPEJhc2UtMC0wX0RhdGEgaWQ9InJlZi0zIj5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0Mk1ESXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrWm1ZNU1tTmtNV1V0TURnMll5MDBabVF6TFRrd00ySXRNRE00TUdFMk5UTTROamN4TFRBd01EVXpNalppUEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0ek5EQTFPRGM4TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtMF9EYXRhPg0KPEJhc2UtMC0wX0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0wX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTFfSGFzRGF0YT50cnVlPC9CYXNlLTAtMV9IYXNEYXRhPg0KPEJhc2UtMC0xX0RhdGEgaWQ9InJlZi00Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0Mk1ESXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrWm1ZNU1tTmtNV1V0TURnMll5MDBabVF6TFRrd00ySXRNRE00TUdFMk5UTTROamN4TFRBd01EVXpNalpqUEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0ek5EQTFPRGc4TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtMV9EYXRhPg0KPEJhc2UtMC0xX0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0xX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTJfSGFzRGF0YT50cnVlPC9CYXNlLTAtMl9IYXNEYXRhPg0KPEJhc2UtMC0yX0RhdGEgaWQ9InJlZi01Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0Mk1ESXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrWm1ZNU1tTmtNV1V0TURnMll5MDBabVF6TFRrd00ySXRNRE00TUdFMk5UTTROamN4TFRBd01EVXpNalprUEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0ek5EQTFPRGs4TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtMl9EYXRhPg0KPEJhc2UtMC0yX0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0yX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTNfSGFzRGF0YT50cnVlPC9CYXNlLTAtM19IYXNEYXRhPg0KPEJhc2UtMC0zX0RhdGEgaWQ9InJlZi02Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0Mk1ESXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrWm1ZNU1tTmtNV1V0TURnMll5MDBabVF6TFRrd00ySXRNRE00TUdFMk5UTTROamN4TFRBd01EVXpNalpsUEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0ek5EQTFPVEE4TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtM19EYXRhPg0KPEJhc2UtMC0zX0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0zX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTRfSGFzRGF0YT50cnVlPC9CYXNlLTAtNF9IYXNEYXRhPg0KPEJhc2UtMC00X0RhdGEgaWQ9InJlZi03Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0Mk1ESXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrWm1ZNU1tTmtNV1V0TURnMll5MDBabVF6TFRrd00ySXRNRE00TUdFMk5UTTROamN4TFRBd01EVXpNalptUEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0ek5EQTFPVEU4TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtNF9EYXRhPg0KPEJhc2UtMC00X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC00X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTVfSGFzRGF0YT50cnVlPC9CYXNlLTAtNV9IYXNEYXRhPg0KPEJhc2UtMC01X0RhdGEgaWQ9InJlZi04Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0Mk1ESXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrWm1ZNU1tTmtNV1V0TURnMll5MDBabVF6TFRrd00ySXRNRE00TUdFMk5UTTROamN4TFRBd01EVXpNamN3UEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0ek5EQTFPVEk4TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtNV9EYXRhPg0KPEJhc2UtMC01X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC01X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTZfSGFzRGF0YT50cnVlPC9CYXNlLTAtNl9IYXNEYXRhPg0KPEJhc2UtMC02X0RhdGEgaWQ9InJlZi05Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0Mk1ESXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrWm1ZNU1tTmtNV1V0TURnMll5MDBabVF6TFRrd00ySXRNRE00TUdFMk5UTTROamN4TFRBd01EVXpNamN4UEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0ek5EQTFPVE04TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtNl9EYXRhPg0KPEJhc2UtMC02X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC02X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTdfSGFzRGF0YT50cnVlPC9CYXNlLTAtN19IYXNEYXRhPg0KPEJhc2UtMC03X0RhdGEgaWQ9InJlZi0xMCI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFdU1DNDJNREl6SlRKREpUSXdRM1ZzZEhWeVpTVXpSRzVsZFhSeVlXd2xNa01sTWpCUWRXSnNhV05MWlhsVWIydGxiaVV6Ukc1MWJHd2lQZzBLUEhOMGNtbHVaMGxFSUdsa1BTSnlaV1l0TXlJK1ptWTVNbU5rTVdVdE1EZzJZeTAwWm1RekxUa3dNMkl0TURNNE1HRTJOVE00TmpjeExUQXdNRFV6TWpjeVBDOXpkSEpwYm1kSlJENE5DanhwYm5SSlJENHpOREExT1RROEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTdfRGF0YT4NCjxCYXNlLTAtN19IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtN19IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC04X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLThfSGFzRGF0YT4NCjxCYXNlLTAtOF9EYXRhIGlkPSJyZWYtMTEiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBVMlZ5ZG1salpYTXVVR1Z5YzJsemRHVnVZMlV2VW1WMmFYUlRaWEoyYVdObGN5VXlReVV5TUZabGNuTnBiMjRsTTBReUxqRXVNQzQyTURJekpUSkRKVEl3UTNWc2RIVnlaU1V6Ukc1bGRYUnlZV3dsTWtNbE1qQlFkV0pzYVdOTFpYbFViMnRsYmlVelJHNTFiR3dpUGcwS1BITjBjbWx1WjBsRUlHbGtQU0p5WldZdE15SStabVk1TW1Oa01XVXRNRGcyWXkwMFptUXpMVGt3TTJJdE1ETTRNR0UyTlRNNE5qY3hMVEF3TURVek1qY3pQQzl6ZEhKcGJtZEpSRDROQ2p4cGJuUkpSRDR6TkRBMU9UVThMMmx1ZEVsRVBnMEtQQzloTVRwVFpYSnBZV3hwZW1GaWJHVkpaRDROQ2p3dlUwOUJVQzFGVGxZNlFtOWtlVDROQ2p3dlUwOUJVQzFGVGxZNlJXNTJaV3h2Y0dVK0RRbz08L0Jhc2UtMC04X0RhdGE+DQo8QmFzZS0wLThfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLThfSGFzTmVzdGVkRGF0YT4NCjwvYTE6Q2FsbFNpdGVfeDAwMkJfVHJhY2VTZXJpYWxpc2VySGVscGVyPg0KPC9TT0FQLUVOVjpCb2R5Pg0KPC9TT0FQLUVOVjpFbnZlbG9wZT4NCg=="
+      }
+    }
+  ],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.1.0.5784",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -137.9449012118248,
+      "EyeY": 204.25070056812959,
+      "EyeZ": -15.672329841181185,
+      "LookX": 130.45718311195301,
+      "LookY": -187.56288978899676,
+      "LookZ": -0.70728454608338254,
+      "UpX": 0.67943131887869523,
+      "UpY": 0.73372986450287525,
+      "UpZ": -0.0036835938083652083
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "List.AddItemToFront",
+        "Id": "25fc9fcfe041485f887aefa7355e4bd2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3212.3642391070384,
+        "Y": 962.14897601522182
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "4869df97eaf948bca115dddfc41872bf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3030.7980678018648,
+        "Y": 940.18198790359622
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Grid Length Slider",
+        "Id": "10452a46f6a8420595c22338485d29dd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3208.5488330181884,
+        "Y": 1119.4621021234996
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "21b7e5898e94428698b938d3751c57dc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3215.7952620536362,
+        "Y": 1310.302178223893
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Grid.ByStartPointEndPoint",
+        "Id": "cee03a6fd1c24217843c69fa0246c3ae",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4237.33955173035,
+        "Y": 968.43791210754262
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "dc2fc063d24144f782240546e3193391",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3769.20839186588,
+        "Y": 818.818504914928
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "2862805878b64ca5987250c9fba21780",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3757.6153091581245,
+        "Y": 1207.4470529016055
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Grid Length Slider",
+        "Id": "db0538f7f10e4d3394abbbde67015082",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3214.1774118036737,
+        "Y": 742.81186695771169
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sequence",
+        "Id": "cdb21574c3c54ecfa115a9feb8957fb0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2609.2674892389359,
+        "Y": 1114.639373008325
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number of Horizontal Gridlines Slider",
+        "Id": "1c952d6c8cb04f2db1d1dd648ad41956",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1450.0545161933976,
+        "Y": 1060.5220563541247
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "gridSpacing (Number From Feet and Inches)",
+        "Id": "06edc1f921044503bb4e009c56bd05b3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1448.5333353659512,
+        "Y": 1234.7411298973309
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "f9dbbea1819549518572a096154460c5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1855.7649525674435,
+        "Y": 1012.5840467378209
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number of Horizontal Gridlines Slider",
+        "Id": "20cba962bfdb4c0189ac94c98ad72ab1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1420.4788285026577,
+        "Y": 2082.9958308055357
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "gridSpacing (Number From Feet and Inches)",
+        "Id": "12ac9532f6b44c73bce4ffdaca2c6d1b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1418.9576476752077,
+        "Y": 2257.2149043487452
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "7714102452ae4acf983bf0c8375caf43",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1826.1892648766977,
+        "Y": 2035.0578211892355
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sequence",
+        "Id": "93276349ed6043bd81e1bf4bbbd73c5f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2579.6918015481979,
+        "Y": 2137.1131474597455
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "281e41fc109a4e8698add8c9958c9937",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3001.2223801111177,
+        "Y": 1962.6557623550116
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "59e6a06275644c8c9830ec64d401fe7c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3183.6934942054504,
+        "Y": 2082.6940170880744
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.AddItemToFront",
+        "Id": "c01b4651e35c417ca87272f87a71a43f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3182.7885514162972,
+        "Y": 1984.6227504666376
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Grid Length Slider",
+        "Id": "fb918f94f8b445098c45a987c8c54714",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3180.6571987657458,
+        "Y": 2228.6646286472551
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Grid Length Slider",
+        "Id": "0abfe01280284685936a5a536cfa1c7a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3184.6017241129275,
+        "Y": 1765.2856414091275
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "7c6b633de4654c5eb277a2d0bdb2e35f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3739.6327041751374,
+        "Y": 1841.2922793663433
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "eb88965a00984c52860ea9f8bc13e0a1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3728.0396214673774,
+        "Y": 2229.9208273530257
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Grid.ByStartPointEndPoint",
+        "Id": "0304b6a0c8e748f7865c258d8a1ce473",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4116.5327835495746,
+        "Y": 2045.3097141782396
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "7da84695d3dd414888c8fe7bd3ea0a32",
+        "Title": "Cool. So this Map that I found from Dynamo Forum: https://forum.dynamobim.com/t/grid-formula-array/23856\r\nCreates a grid in a specific frequency. If we were to dumb down the code to create something static how would that look? 9:45AM",
+        "Nodes": [],
+        "Left": 400.177507304634,
+        "Top": 412.90004953944691,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "0528898920a74937aedc66c78f8a796f",
+        "Title": "What happens when you get rid of X?",
+        "Nodes": [],
+        "Left": 3737.6491509859397,
+        "Top": 1061.0937634290917,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "f9d3453c107e48f3913ef9385fc8fac0",
+        "Title": "What happens when you get rid of X?",
+        "Nodes": [],
+        "Left": 3708.0734632951971,
+        "Top": 2083.5675378805072,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 115.11299989436759,
+    "Y": 98.561638046022438,
+    "Zoom": 0.16778859868501392
+  }
+}
